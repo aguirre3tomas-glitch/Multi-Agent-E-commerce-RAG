@@ -1065,9 +1065,9 @@ def create_guardrail() -> tuple[str, str]:
             ],
         },
         topicPolicyConfig={
-            'topics': blocked_topics,
-            'tierConfig': {'tierName': 'STANDARD'},
-        },
+                    'topicsConfig': blocked_topics,
+                    'tierConfig': {'tierName': 'STANDARD'},
+                },
         wordPolicyConfig={
             'managedWordListsConfig': [{'type': 'PROFANITY'}],
         },
