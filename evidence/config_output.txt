@@ -1,0 +1,28 @@
+
+============================================================
+  Udacity AgentCore Project Configuration
+============================================================
+  Region:                    us-east-1
+  Account ID:                075480039743
+  Orchestrator Model:        us.anthropic.claude-haiku-4-5-20251001-v1:0
+  Worker Model:              us.anthropic.claude-sonnet-4-5-20250929-v1:0
+  --------------------------------------------------------
+  Orders Table:              udacity-agentcore-orders
+  Customers Table:           udacity-agentcore-customers
+  Workflow State Table:      udacity-agentcore-workflow-state
+  Policy Bucket:             udacity-agentcore-policy-docs-075480039743-eb30aa50
+  Vector Bucket:             udacity-agentcore-vectors-075480039743-eb30aa50
+  Vector Indexes:            returns-policy-index, shipping-policy-index, warranty-policy-index
+  AgentCore Role:            arn:aws:iam::075480039743:role/udacity-agentcore-agentcore-role
+  Agent Log Group:           /aws/bedrock/agentcore/udacity-agentcore
+  --------------------------------------------------------
+  Returns KB ID:             8MRVQMBXUH
+  Shipping KB ID:            F1JPSMYA8M
+  Warranty KB ID:            AYSLJDGR2E
+  --------------------------------------------------------
+  Runtime Name:              udacity_agentcore_runtime
+  Runtime ARN:               arn:aws:bedrock-agentcore:us-east-1:075480039743:runtime/udacity_agentcore_runtime-q6ltajFEur
+  Guardrail ID:              sv8v7xismk9g
+  Guardrail Version:         1
+============================================================
+

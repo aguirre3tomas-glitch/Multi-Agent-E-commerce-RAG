@@ -1,0 +1,21 @@
+novamart-shipping-policy-kb  (F1JPSMYA8M)  status=ACTIVE
+   store      : S3_VECTORS
+   bucket     : arn:aws:s3vectors:us-east-1:075480039743:bucket/udacity-agentcore-vectors-075480039743-eb30aa50
+   index      : shipping-policy-index
+   embedding  : amazon.titan-embed-text-v2:0
+   datasource : shipping-policies-s3  prefix=['policies/shipping/']  last sync=COMPLETE scanned=2 indexed=2
+
+novamart-warranty-policy-kb  (AYSLJDGR2E)  status=ACTIVE
+   store      : S3_VECTORS
+   bucket     : arn:aws:s3vectors:us-east-1:075480039743:bucket/udacity-agentcore-vectors-075480039743-eb30aa50
+   index      : warranty-policy-index
+   embedding  : amazon.titan-embed-text-v2:0
+   datasource : warranty-policies-s3  prefix=['policies/warranty/']  last sync=COMPLETE scanned=2 indexed=2
+
+novamart-returns-policy-kb  (8MRVQMBXUH)  status=ACTIVE
+   store      : S3_VECTORS
+   bucket     : arn:aws:s3vectors:us-east-1:075480039743:bucket/udacity-agentcore-vectors-075480039743-eb30aa50
+   index      : returns-policy-index
+   embedding  : amazon.titan-embed-text-v2:0
+   datasource : returns-policies-s3  prefix=['policies/returns/']  last sync=COMPLETE scanned=2 indexed=2
+
