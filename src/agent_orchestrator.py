@@ -465,7 +465,7 @@ def build_policy_agent() -> Agent:
         """
         return format_kb_results(retrieve_from_knowledge_base(config.RETURNS_KB_ID, query))
 
-    returns_retriever = Agent(
+    ReturnsPolicyRetrieverAgent = Agent(
         model=BedrockModel(model_id=config.WORKER_MODEL_ID, temperature=0.0),
         tools=[retrieve_returns_policy],
         system_prompt=(
@@ -488,7 +488,7 @@ def build_policy_agent() -> Agent:
         """
         return format_kb_results(retrieve_from_knowledge_base(config.SHIPPING_KB_ID, query))
 
-    shipping_retriever = Agent(
+    ShippingPolicyRetrieverAgent = Agent(
         model=BedrockModel(model_id=config.WORKER_MODEL_ID, temperature=0.0),
         tools=[retrieve_shipping_policy],
         system_prompt=(
@@ -511,7 +511,7 @@ def build_policy_agent() -> Agent:
         """
         return format_kb_results(retrieve_from_knowledge_base(config.WARRANTY_KB_ID, query))
 
-    warranty_retriever = Agent(
+    WarrantyPolicyRetrieverAgent = Agent(
         model=BedrockModel(model_id=config.WORKER_MODEL_ID, temperature=0.0),
         tools=[retrieve_warranty_policy],
         system_prompt=(
@@ -523,9 +523,9 @@ def build_policy_agent() -> Agent:
 
     # domain name -> retriever sub-agent
     retrievers = {
-        'Returns': returns_retriever,
-        'Shipping': shipping_retriever,
-        'Warranty': warranty_retriever,
+        'Returns': ReturnsPolicyRetrieverAgent,
+        'Shipping': ShippingPolicyRetrieverAgent,
+        'Warranty': WarrantyPolicyRetrieverAgent,
     }
 
     @tool
