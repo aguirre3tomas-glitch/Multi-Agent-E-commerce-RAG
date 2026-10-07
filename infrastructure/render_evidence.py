@@ -34,7 +34,8 @@ def load_font(cands, size):
 
 
 # ── 1. terminal rendering of the real test output ────────────────────────────
-def render_terminal(src: pathlib.Path, dst: pathlib.Path) -> tuple:
+def render_terminal(src: pathlib.Path, dst: pathlib.Path,
+                    title: str = "tests/test_agent.py all   -   Python venv") -> tuple:
     raw = src.read_text(encoding="utf-8", errors="replace").replace("\r", "")
     raw = ANSI.sub("", raw)
     lines = raw.split("\n")
@@ -72,7 +73,7 @@ def render_terminal(src: pathlib.Path, dst: pathlib.Path) -> tuple:
     for i, col in enumerate([(255, 95, 86), (255, 189, 46), (39, 201, 63)]):
         cx = 22 + i * 22
         d.ellipse([cx, title_h // 2 - 7, cx + 14, title_h // 2 + 7], fill=col)
-    d.text((104, title_h // 2 - 11), "tests/test_agent.py all   -   Python venv",
+    d.text((104, title_h // 2 - 11), title,
            font=tfont, fill=(190, 195, 205))
 
     y = title_h + pad
@@ -198,3 +199,7 @@ if __name__ == "__main__":
     print("tests image :", a, "->", EV / "screenshot_tests_120.png")
     b = render_service_map(EV / "xray_service_graph.json", EV / "screenshot_xray_service_map.png")
     print("map image   :", b, "->", EV / "screenshot_xray_service_map.png")
+    # the reviewer asks for the output of `python src/agent_orchestrator.py test`
+    c = render_terminal(EV / "live_test.txt", EV / "screenshot_live_test.png",
+                        title="src/agent_orchestrator.py test   -   3 end-to-end scenarios")
+    print("live image  :", c, "->", EV / "screenshot_live_test.png")

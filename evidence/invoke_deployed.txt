@@ -1,0 +1,14 @@
+Invoking arn:aws:bedrock-agentcore:us-east-1:075480039743:runtime/udacity_agentcore_runtime-q6ltajFEur
+Session: 07529e27 | Customer: CUST-001
+Query: What is the return policy for premium customers?
+
+Response: Thank you for your question about our return policy for premium customers!
+
+For premium members at NovaMart, we offer an extended **60-day return window** from the date of purchase. This gives you twice as long as our standard policy to decide if a product is right for you.
+
+To be eligible for a return, items must be in their original condition and packaging. Once you initiate a return within the 60-day period, we'll provide you with a return reference number and instructions for sending the item back.
+
+After we receive and inspect your return, refunds are typically processed back to your original payment method within 5-7 business days.
+
+Is there a specific order you'd like help with returning? If you provide me with your order number, I can look up the details and help you start the return process right away.
+X-Ray trace: 1-6ac64255-cc29677344167c8186011967

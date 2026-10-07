@@ -16,9 +16,9 @@
   AgentCore Role:            arn:aws:iam::075480039743:role/udacity-agentcore-agentcore-role
   Agent Log Group:           /aws/bedrock/agentcore/udacity-agentcore
   --------------------------------------------------------
-  Returns KB ID:             8MRVQMBXUH
-  Shipping KB ID:            F1JPSMYA8M
-  Warranty KB ID:            AYSLJDGR2E
+  Returns KB ID:             LV0EMXPUFX
+  Shipping KB ID:            ZI5T8FEKJD
+  Warranty KB ID:            ZZDCJ1M9JK
   --------------------------------------------------------
   Runtime Name:              udacity_agentcore_runtime
   Runtime ARN:               arn:aws:bedrock-agentcore:us-east-1:075480039743:runtime/udacity_agentcore_runtime-q6ltajFEur
