@@ -105,7 +105,9 @@ def create_one(domain, name, prefix, index):
                 "s3VectorsConfiguration": {
                     # the API takes the bucket ARN (not its name) plus the index name
                     "vectorBucketArn": config.VECTOR_STORE_BUCKET_ARN,
-                    "indexName": index,
+                    # indexArn, not indexName: the console renders the index from
+                    # the ARN, and shows an empty dash when only the name is set.
+                    "indexArn": f"{config.VECTOR_STORE_BUCKET_ARN}/index/{index}",
                 },
             },
         )["knowledgeBase"]
